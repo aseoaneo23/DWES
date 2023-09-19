@@ -4,7 +4,7 @@
     <img src="https://github.com/aseoaneo23/DWES/assets/145000901/a4c845bb-269c-469b-a767-f8a922a99619"/>
   </head>
   <body>
-    <h2><b>Índice</b></h2>
+    <h3><b>Índice</b></h3>
     <list>
       <ol>
         <li>:question:Descripción del proyecto</li>
