@@ -19,7 +19,7 @@
     </list>
         <h3 align="left"><b>Descripción</b></h3>
         <p align="justify">Desarrollo Web en Entorno Servidor es un módulo enfocado a la adquirir conocimientos de programación de servidores que interconectan las peticiones de un usuario con las páginas que solicitan.</p>
-        <h2 align="left"><b>Estado del proyecto</b></h2>
+        <h3 align="left"><b>Estado del proyecto</b></h3>
         <p align="justify">En la actualidad, el módulo DWES es impartido en los ciclos de Desarrollo de Aplicaciones Web durante el último año del mismo.</p>
         <h3 align="left"><b>Características</b></h3>
         <p align="justify">
