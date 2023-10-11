@@ -1,3 +1,4 @@
+
 <html>
   <body>
       <h1>Conversor de longitudes</h1>
@@ -10,7 +11,13 @@
 	    $v_metros = $v_pulgadas * 0.0254;
 	    echo $v_pulgadas."pulgada(s) = ".$v_metros." metro(s)";
 	  } else {
+	     if ($_POST["funidad"] == "pies") {
+	       $v_pies = $_POST["fcantidad"];
+	       $v_metros = $v_pies * 0.3048;
+	       echo $v_pies."pie(s) = ".$v_metros." metro(s)";
+	     } else {
 	    echo "Unidad no soportada";
+	     }
 	  }
 	}
       ?>
@@ -24,7 +31,8 @@
 	<label for "pulgada_input">Pulgada(s)</label><br>
 	<input type="radio" id="otro_input" name="funidad" value="otro">
 	<label for="otro_input">Otro</label>><br>
-
+	<input type="radio" id="pies_input" name="funidad" value="pies">
+	<label for="pies_input">Pies</label><br>
 	<input type="submit" value="Convertir">
       </form>
   </body>
