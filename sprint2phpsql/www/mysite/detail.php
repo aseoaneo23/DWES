@@ -41,6 +41,12 @@
 	}
 	mysqli_close($db);
      ?>
-    </ul>
+    </ul><br>
+    <p>Deja un comentario:</p>
+    <form action="/comment.php" method="post">
+	<textarea placeholder="Escriba un comentario..." rows="4" cols="50" name="new_comment"></textarea><br>
+	<input type="hidden" name="id_juego" value"<?php echo $id_juego;?>">
+	<input type="submit" value="Comentar">
+    </form>
    </body>
 </html>
