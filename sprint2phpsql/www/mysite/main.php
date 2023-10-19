@@ -50,7 +50,7 @@
     //Recorrer el resultado
     while($row = mysqli_fetch_array($result)){
     echo '<tr>';
-    echo '<td id="num"><a href="/detail.php?id=<id>">'.$row['id'].'</a></td>';
+    echo '<td id="num"><a href="/detail.php?id='.$row['id'].'">'.$row['id'].'</a></td>';
     echo '<td id="nom">'.$row['nombre'].'</td>';
     $url = $row['url_imagen'];
     echo '<td><img src="'.$url.'"></td>';
