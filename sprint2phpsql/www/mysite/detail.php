@@ -34,7 +34,7 @@
     <h3>Comentarios:</h3>
     <ul>
      <?php
-	$query2 = 'SELECT * FROM tComentarios WHERE id='.$id_juego;
+	$query2 = 'SELECT * FROM tComentarios WHERE juego_id='.$id_juego;
 	$result2 = mysqli_query($db,$query2) or die('Error de consulta');
 	while ($row = mysqli_fetch_array($result2)) {
 	  echo '<li>'.$row['comentario'].'</li>';
@@ -45,7 +45,7 @@
     <p>Deja un comentario:</p>
     <form action="/comment.php" method="post">
 	<textarea placeholder="Escriba un comentario..." rows="4" cols="50" name="new_comment"></textarea><br>
-	<input type="hidden" name="id_juego" value"<?php echo $id_juego;?>">
+	<input type="hidden" name="id_juego" value="<?php echo $id_juego; ?>">
 	<input type="submit" value="Comentar">
     </form>
    </body>

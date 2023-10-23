@@ -49,14 +49,14 @@
     $result = mysqli_query($db,$query) or die('Error en la consulta');
     //Recorrer el resultado
     while($row = mysqli_fetch_array($result)){
-    echo '<tr>';
-    echo '<td id="num"><a href="/detail.php?id='.$row['id'].'">'.$row['id'].'</a></td>';
-    echo '<td id="nom">'.$row['nombre'].'</td>';
-    $url = $row['url_imagen'];
-    echo '<td><img src="'.$url.'"></td>';
-    echo '<td id="est">'.$row['estudio'].'</td>';
-    echo '<td id="gen">'.$row['género'].'</td>';
-    echo '</tr>';
+      echo '<tr>';
+      echo '<td id="num"><a href="/detail.php?id='.$row['id'].'">'.$row['id'].'</a></td>';
+      echo '<td id="nom">'.$row['nombre'].'</td>';
+      $url = $row['url_imagen'];
+      echo '<td><img src="'.$url.'"></td>';
+      echo '<td id="est">'.$row['estudio'].'</td>';
+      echo '<td id="gen">'.$row['género'].'</td>';
+      echo '</tr>';
     }
     mysqli_close($db); 
   ?>
