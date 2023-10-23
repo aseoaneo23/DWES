@@ -7,7 +7,7 @@
 	$id_juego = $_POST['id_juego'];
 	$comentario = $_POST['new_comment'];	
 
-	$query = "INSERT INTO tComentarios(comentario, usuario_id, juego_id) VALUES ('".$comentario."',NULL,".$id_juego.")";
+	$query = "INSERT INTO tComentarios(comentario, usuario_id, juego_id, timestamp) VALUES ('".$comentario."',NULL,".$id_juego.",now())";
 
 	mysqli_query($db, $query) or die('Error');
 
