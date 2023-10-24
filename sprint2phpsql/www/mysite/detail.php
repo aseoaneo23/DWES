@@ -4,6 +4,9 @@
 <html>
   <head>
     <style>
+	*{
+	  background-color: #f2deeb;
+	}
      h1{
 	font-family:Verdana,sans-serif;
      }
@@ -19,13 +22,13 @@
   </head>
   <body>
     <?php
-	if(!isset($_GET['id'])) {
+	if(!isset($_GET['id'])) { //controlamos que se haya pasado un id
 	  die('No se ha especificado ningún id de juego');
 	}
-	$id_juego = $_GET['id'];
-	$query = 'SELECT * FROM tJuegos WHERE id='.$id_juego;
+	$id_juego = $_GET['id']; //guardamos el id que nos pasan
+	$query = 'SELECT * FROM tJuegos WHERE id='.$id_juego; //hacemos la consulta
 	$result = mysqli_query($db, $query) or die('Error en la consulta');
-	$onerow = mysqli_fetch_array($result);
+	$onerow = mysqli_fetch_array($result); 
 	echo '<h1>'.$onerow['nombre'].'</h1>';
 	echo '<img src="'.$onerow['url_imagen'].'"/>';
  	echo '<p>Estudio: </p>'.$onerow['estudio'];
