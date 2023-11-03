@@ -1,3 +1,4 @@
+import random
 if __name__ =="__main__":
 
     punt =0 #Variable de la puntuación
@@ -5,7 +6,7 @@ if __name__ =="__main__":
     adiv1_dicc = {
         'adivinanza':'¿Cuál es el jueguete más egoísta?',
         'ops':'a) Pelota \nb) Yo-yo \nc) Peonza',
-        'oc':'a'
+        'oc':'b'
     }
     #Instauramos el diccionario 1
 
@@ -25,11 +26,11 @@ if __name__ =="__main__":
 
     dicclist= [adiv1_dicc, adiv2_dicc, adiv3_dicc]
 
-
+    adivs = random.sample(dicclist,2) #Selecciona dos elementos aleatorios de el objeto que pasemos.
 
     print("Esto es un juego de adivinanza")
         #Mostramos adivinanzas
-    for i in dicclist:
+    for i in adivs:
             print(i['adivinanza'])
             print(i['ops'])
             op = input('Opción elegida: ')#Aceptamos la entrada del usuario
