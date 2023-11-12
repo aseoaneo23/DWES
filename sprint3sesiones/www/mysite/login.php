@@ -10,12 +10,13 @@ $query->bind_param("s",$email_posted);
 $query->execute();
 $secureQuery = $query->get_result();
 $onlyRow = $secureQuery->fetch_row();
-
+//Comprobamos que el usuario exista
 if(mysqli_num_rows($secureQuery) > 0){
+    //  Comprobamos que la contraseña sea correcta
     if(password_verify($password_posted,$onlyRow[1]) == 1){
-        session_start();
+        session_start();//Iniciamos la sesión
         $_SESSION['userId'] = $onlyRow[0];
-        header('Location: main.php');
+        header('Location: main.php');//REdirigimos a la main.php
     } else {
         echo '<p>Contraseña incorrecta</p>';
     
