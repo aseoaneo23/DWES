@@ -31,6 +31,12 @@
 	  background-color: #b9c6eb;
 	  text-align: center;
 	  padding: 20px;
+	  opacity:1;
+	  transition: background-color 0.3s ease-in-out;
+	
+	}
+	tr:hover td{
+		background-color: #B9EBE0;
 	}
 	th{
 	  background-color: #b9ebe0;
@@ -50,6 +56,7 @@
 		color: black;
 		text-decoration: none;
 	}
+		
 	
   </style>
  </head>
