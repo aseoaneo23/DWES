@@ -43,10 +43,18 @@
 	  font-style: italic;
 	  font-size: 18px;
 	}
+	.logout{
+		position: fixed;
+		top:10px;
+		left:80%;
+		color: black;
+		text-decoration: none;
+	}
+	
   </style>
  </head>
  <body>
-  <h1>¡Conexión establecida!</h1>
+  <h1>¡Bienvenido a la página principal!</h1><a class="logout" href="logout.php">->Logout</a>
   <table border="solid">
    <tr>
     <th>ID</th>

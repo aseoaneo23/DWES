@@ -18,9 +18,18 @@
 	font-family:Arial;
 	font-weight:bolder;
      }
+	 .logout{
+		position: fixed;
+		top:10px;
+		left:80%;
+		color: black;
+		text-decoration: none;
+	}
+	
     </style>
   </head>
   <body>
+  <a class="logout" href="logout.php">->Logout</a>
     <?php
 	if(!isset($_GET['id'])) { //controlamos que se haya pasado un id
 	  die('No se ha especificado ningún id de juego');
