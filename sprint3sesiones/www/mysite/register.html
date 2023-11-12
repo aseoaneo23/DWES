@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('./bg-image-register-form.jpg');
+            background-size: cover;
+            
+        }
+
+        h1{
+            text-align: center;
+            color: #45a049;
+        }
+
+        label{
+            font-weight: bolder;
+        }
+        .container{
+            width: 30%;
+            margin: auto;
+            background-color: rgb(255, 255, 255, 0.6);
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #4caf50;
+        }
+
+        #email,#pass1,#pass2,#name,#surname{
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+
+        }
+        
+
+        #submit{
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #submit:hover{
+            background-color: #45a049;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+    <div class="container">
+        <form action="register.php" method="post">
+        <input type="text" name="f_name" id="name" placeholder="Nombre"/>
+        <input type="text" name="f_surname" id="surname" placeholder="Apellidos"/>
+        <input type="email" name="f_email" id="email" placeholder="Email"/>
+        <input type="password" name="f_passwd" id="pass1" placeholder="Contraseña"/>
+        <input type="password" name="f_rpasswd" id="pass2" placeholder="Repita la contraseña"/>
+        <input type="checkbox" id="checkbox"/><label for="checkbox">Acepto las condiciones de uso.</label>
+        <button type="submit" value="Enviar" id="submit">Registrarme</button>
+    </form>
+    </div>
+</body>
+</html>
