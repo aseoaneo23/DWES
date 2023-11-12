@@ -53,11 +53,23 @@
         }
 
     </style>
+    <script>//Funcion que me guarda los valores introducidos en el form y si alguno es vacío, envía alerta.
+        function validateForm(){
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('passwd').value;
+
+            if(email === '' || password === ''){
+                alert('Por favor, completa todos los campos del formulario.');
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
     <h1>Login</h1>
     <div class="container">
-        <form action="login.php" method="post">
+        <form action="login.php"  onsubmit=" return validateForm()" method="post"><!--Llamo a la función y al enviar recibo boolean del resultado-->
         <input type="text" id="email" name="f_email" placeholder="E-mail"><br>
         <input type="password" id="passwd" name="f_password" placeholder="Contraseña">
         <input type="submit" id="submit" value="Iniciar Sesión">
