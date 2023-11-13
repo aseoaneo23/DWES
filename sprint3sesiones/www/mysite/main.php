@@ -26,6 +26,7 @@
 	}
 	table{
 		margin: auto;
+		margin-top: 10%
 	}
 	td{
 	  background-color: #b9c6eb;
@@ -49,10 +50,14 @@
 	  font-style: italic;
 	  font-size: 18px;
 	}
-	.logout{
-		position: fixed;
-		top:10px;
-		left:80%;
+	ul{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+		color: black;
+	}
+	ul a{
+		float: right;
 		color: black;
 		text-decoration: none;
 	}
@@ -61,7 +66,15 @@
   </style>
  </head>
  <body>
-  <h1>¡Bienvenido a la página principal!</h1><a class="logout" href="logout.php">->Logout</a>
+  <h1>¡Bienvenido a la página principal!</h1>
+	<ul>
+		<li>
+			<a class="logout" href="logout.php">Logout</a><br>
+		</li>
+		<li>
+			<a class="passwordchange" href="cambiarcontraseña.html">¿Has olvidado tu contraseña?</a>
+		</li>
+	</ul> 
   <table border="solid">
    <tr>
     <th>ID</th>

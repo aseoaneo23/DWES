@@ -37,7 +37,14 @@ $insertarUsuario->execute();//Introducimos los datos a la base de datos.
 $insertarUsuario->get_result();
 $insertarUsuario->close();
 
-//REdirección a la página principal.
+//INICIAMOS SESIÓN AL REGISTRARSE
+$id_usuario_nuevo = $db->prepare('SELECT id FROM tUsuarios WHERE email = ?');
+$id_usuario_nuevo->bind_param('s',$email);
+$id_usuario_nuevo->execute();
+$resultado = $id_usuario_nuevo->get_result();
+$unaFila = $resultado->fetch_row();
+session_start();
+$_SESSION['userId'] = $unaFila[0];
 header('Location: main.php');
 
 mysqli_close($db);
