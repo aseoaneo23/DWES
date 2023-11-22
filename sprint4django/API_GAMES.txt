@@ -1,0 +1,19 @@
+Esto es una descripción de la API de juegos.
+
+3 endpoints:
+
+-1: GET /juegos 
+	Descripción: Devuelve información de todos los juegos de la base de datos.
+	Respuesta: Array JSON. Cada objeto tiene 'id','nombre','url_imagen','estudio','género'.
+
+-2: GET /juegos/<id_juego>
+	Descripción: Devuelve información de un juego que cuyo id coincida con el indicado en la URL por el usuario.
+	Resupuesta: Diccionarios  JSON. Cada diccionario tiene 'id','nombre','url_imagen','estudio','género', 'comentarios'.El valor 'comentarios' es un array JSON, y cada objeto tiene 'id' y 'comentario'.
+
+-3 POST /juegos/<id_usuario>/comentario
+	Descripción: Sirve para publicar un comentario anónimo.
+        Cuerpo de petición: Diccionario JSON con clave de "nuevo_comentario".
+        Respuesta: Diccionario vacío. Código 200 OK en caso de éxito.
+
+Antonio Seoane, 2ºDAW 22/11/2023
+
